@@ -32,5 +32,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          document: Lemonade-m30s-*.zip
-          message: "New Lemonade Kernel Update for M30s! Download Now!!"
+          document: Twilight-m30s-*.zip
+          message: "New Twilight Kernel Update for M30s! Download Now!!"
