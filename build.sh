@@ -5,7 +5,7 @@
 
 SECONDS=0 # builtin bash timer
 ZIPNAME="Twilight-m30s-$(date '+%Y%m%d-%H%M').zip"
-TC_DIR="$(pwd)/tc/clang-r399163b1"
+TC_DIR="$(pwd)/proton-clang"
 AK3_DIR="$(pwd)/android/AnyKernel3"
 DEFCONFIG="m30s-oneui_defconfig"
 
@@ -18,7 +18,7 @@ export PATH="$TC_DIR/bin:$PATH"
 
 if ! [ -d "$TC_DIR" ]; then
 	echo "AOSP clang not found! Cloning to $TC_DIR..."
-	if ! git clone --depth=1 -b 11 https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone "$TC_DIR"; then
+	if ! git clone https://github.com/kdrag0n/proton-clang --dept=1 -b master "$TC_DIR"; then
 		echo "Cloning failed! Aborting..."
 		exit 1
 	fi
